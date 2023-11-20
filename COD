@@ -377,8 +377,8 @@ function showContent() {
         document.body.style.backgroundSize = "cover";
         document.body.style.backgroundRepeat = "no-repeat";
         specialMessage.innerHTML = '<p style = "font-size:60px;margin-top:370px;background-color:black">La revedere</p>';
-        document.body.innerHTML = ''; // Golește corpul documentului
-        document.body.appendChild(specialMessage); // Adaugă mesajul special
+        document.body.innerHTML = '';
+        document.body.appendChild(specialMessage); 
     } else {
         showSection('inainte');
     }
