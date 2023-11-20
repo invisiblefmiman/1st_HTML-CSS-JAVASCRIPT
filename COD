@@ -370,7 +370,18 @@ function closeModal() {
 
 function showContent() {
     closeModal();
-    showSection('inainte');
+    var response = confirm("Dorești să afli informații despre Leo Messi?");
+    if (!response) {
+        var specialMessage = document.createElement('div');
+        document.body.style.backgroundImage = "url('https://staticg.sportskeeda.com/editor/2023/01/32f00-16728353050846-1920.jpg?w=840')";
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundRepeat = "no-repeat";
+        specialMessage.innerHTML = '<p style = "font-size:60px;margin-top:370px;background-color:black">La revedere</p>';
+        document.body.innerHTML = ''; // Golește corpul documentului
+        document.body.appendChild(specialMessage); // Adaugă mesajul special
+    } else {
+        showSection('inainte');
+    }
 }
 
 window.onload = showInainte;
